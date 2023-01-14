@@ -28,7 +28,7 @@ Route::post('/login', [App\Http\Controllers\API\AuthController::class, 'login'])
 //Protecting Routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/profile', function(Request $request) {
-        return auth()->user();
+        return auth()->user()->email;
     });
 Route::post('/upload', [App\Http\Controllers\API\FileUploadController::class, 'upload']);
     // API route for logout user
