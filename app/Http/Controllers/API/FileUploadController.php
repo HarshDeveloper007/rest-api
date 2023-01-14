@@ -6,7 +6,7 @@ class FileUploadController extends Controller {
     public function upload(Request $request) 
     { 
         $validator = Validator::make($request->all(),[ 
-              'file' => 'required|mimes:doc,docx,pdf,txt,csv|max:2048',
+              'file' => 'required|mimes:doc,docx,pdf,txt,csv|max:524',
         ]);   
   
         if($validator->fails()) {          
