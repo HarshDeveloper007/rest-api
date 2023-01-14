@@ -1,0 +1,7 @@
+.env
+vendor/
+storage/app/public/files/*
+storage/framework/cache/*
+storage/logs/laravel.log
+storage/framework/views/
+storage/framework/sessions/
